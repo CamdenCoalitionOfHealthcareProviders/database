@@ -1,12 +1,12 @@
 # A Database Prototype
-This is prototype of the ACO Application, which is an app in the Coalition's workflow management software. This database contains fields within the current ACO Application. It is built using PostgreSQL.
+This is prototype of the ACO Application, which is an app in the Coalition's workflow management software. This database contains fields within the current ACO Application. This prototype is built using PostgreSQL.
 
 This repository houses the SQL code used to build the database.
 
 ## Download and Install PostgreSQL
 To download PostgreSQL, please see their [download page](http://www.postgresql.org/download/).
 
-To install, Please see the [detailed installation guides on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Detailed_installation_guides).
+To install, please see the [detailed installation guides on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Detailed_installation_guides).
 
 ## pgAdmin III
 [pgAdmin](http://www.pgadmin.org/) is development and administration GUI that supports all of PostgreSQL's features. It usually comes installed with PostgreSQL.
