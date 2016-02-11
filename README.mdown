@@ -1,0 +1,26 @@
+# A Database Prototype
+This is prototype of the ACO Application, which is an app in the Coalition's workflow management software. This database contains fields within the current ACO Application. It is built using PostgreSQL.
+
+This repository houses the SQL code used to build the database.
+
+## Download and Install PostgreSQL
+To download PostgreSQL, please see their [download page](http://www.postgresql.org/download/).
+
+To install, Please see the [detailed installation guides on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Detailed_installation_guides).
+
+## pgAdmin III
+[pgAdmin](http://www.pgadmin.org/) is development and administration GUI that supports all of PostgreSQL's features. It usually comes installed with PostgreSQL.
+
+## Create the database in PostgreSQL
+In pgAdmin III, open the PSQL Console. Run the following SQL code to create your database using the default database server:
+
+`CREATE DATABASE aco;`
+
+## Run the SQL code
+To run the SQL code in the PSQL Console, use the following command:
+
+`\i [filename].sql;`
+
+Use the forward slash `/` if the location of the SQL code is in a different directory. You can also add the network drive, if necessary (`C:/` or `Y:/`, for instance):
+
+`\i [directory]/[filename].sql;`
