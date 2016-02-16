@@ -2,10 +2,10 @@
 CREATE TABLE cap_list (
 	hie_id varchar,
 	subscriber_id varchar,
-	practice char,
+	practice varchar,
 	last_cap_date date,
-	payer char,
-	source char,	
+	payer varchar,
+	source varchar,	
 	PRIMARY KEY (subscriber_id)
 );
 

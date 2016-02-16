@@ -4,7 +4,7 @@ CREATE TABLE pra (
 	pra_id varchar,
 	lmpdt date,
 	edcdt date,
-	preg_status char,
+	preg_status varchar,
 	hie_id varchar,
 	PRIMARY KEY (pra_id)
 );
