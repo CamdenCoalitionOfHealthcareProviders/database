@@ -3,7 +3,7 @@ CREATE TABLE cap_list (
 	hie_id varchar,
 	subscriber_id varchar,
 	unique_id varchar,
-	practice char,
+	practice varchar,
 	dob date,
 	medicaid_no numeric,
 	medicare_no numeric,
