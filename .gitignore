@@ -1,5 +1,8 @@
 # Ignore CSV Files
 *.csv
 
-# Ignore Session Data files
+# Ignore R Session Data files
 .RData
+
+# Ignore R History files
+.Rhistory
