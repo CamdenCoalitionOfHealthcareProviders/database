@@ -1,2 +1,5 @@
-# Ignore CSV files
+# Ignore CSV Files
 *.csv
+
+# Ignore Session Data files
+.RData
