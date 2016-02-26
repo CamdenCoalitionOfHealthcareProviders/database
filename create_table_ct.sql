@@ -3,11 +3,11 @@ CREATE TABLE client_track (
 	admission_id varchar REFERENCES utilization (admission_id),
 	encounter  varchar,
 	encounter_other varchar,
-	sched_date date,
+	sched_date varchar,
 	staff_assignment varchar,
 	staff_assignment_other varchar,
 	sched_time varchar,
-	encounter_date date,
+	encounter_date varchar,
 	ct_present varchar,
 	call_not_complete_reason varchar,
 	call_not_complete_reason_other varchar,
@@ -17,10 +17,10 @@ CREATE TABLE client_track (
 	hours varchar,
 	documentation_hours varchar,
 	notes varchar,
-	home_visit_1_sched_complete_date date,
-	home_visit_2_sched_complete_date date,
-	gift_card_number numeric,
-	gift_card_date date,
+	home_visit_1_sched_complete_date varchar,
+	home_visit_2_sched_complete_date varchar,
+	gift_card_number varchar,
+	gift_card_date varchar,
 	gift_card_no varchar,
 	dsr_service_activity varchar,
 	active_pt varchar,
@@ -41,8 +41,7 @@ CREATE TABLE client_track (
 	init_practice_pcp_sched_other varchar,
 	pra_id varchar REFERENCES pra (pra_id),
 	ppv varchar,
-	spec_ops_id varchar REFERENCES spec_ops (spec_ops_id),
-	document varchar
+	spec_ops_id varchar REFERENCES spec_ops (spec_ops_id)
 );
 
 -- add comment to this table

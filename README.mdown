@@ -24,3 +24,10 @@ To run the SQL code in the PSQL Console, use the following command:
 Use the forward slash `/` if the location of the SQL code is in a different directory. You can also add the network drive, if necessary (`C:/` or `Y:/`, for instance):
 
 `\i [directory]/[filename].sql;`
+
+## Notes
+* In some instances, the data type of some columns had to be changed, usually from `numeric` or `date` to `varchar` to reflect challenges of importing data for this prototype Postgres database.
+* Some editing of the CSV files used to import into the database had to be done manually into Excel.
+* In a perfect world:
+	* Data types will remain as originally intended
+	* Data cleaning/manipulation will be done using an automated script
