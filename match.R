@@ -40,12 +40,15 @@
 # Set working directories
 setwd('Y:/database')
 
+# Set library
+library(readr)
+
 # Read in csv files
-cap_list <- read.csv("cap_list.csv")
-pra <- read.csv("pra.csv")
-spec_ops <- read.csv("spec_ops.csv")
-utilization <- read.csv("utilization.csv")
-client_track <- read.csv("client_track.csv")
+cap_list <- read_csv("cap_list.csv")
+pra <- read_csv("pra.csv")
+spec_ops <- read_csv("spec_ops.csv")
+utilization <- read_csv("utilization.csv")
+client_track <- read_csv("client_track.csv")
 
 #matchr function
 matchr <- function(df1, df2, col){
