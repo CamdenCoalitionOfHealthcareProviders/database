@@ -25,8 +25,13 @@ Use the forward slash `/` if the location of the SQL code is in a different dire
 
 `\i [directory]/[filename].sql;`
 
+## R Scripts
+* `utilization.R` Removes duplicate Admission IDs
+* `match.R` Filters Client Track records _(work in progress)_
+* `rename_csv_col_name.R` Rename columns to match column names in the Postgres database _(work in progress)_
+
 ## Notes
-* In some instances, the data type of some columns had to be changed, usually from `numeric` or `date` to `varchar` to reflect challenges of importing data for this prototype Postgres database.
+* The data type of all columns had to be changed to `varchar`, usually from `numeric` or `date`, to reflect challenges of importing data for this prototype Postgres database.
 * Some editing of the CSV files used to import into the database had to be done manually into Excel.
 * In a perfect world:
 	* Data types will remain as originally intended
