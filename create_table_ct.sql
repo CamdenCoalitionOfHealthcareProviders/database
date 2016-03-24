@@ -90,4 +90,3 @@ COMMENT ON COLUMN client_track.init_practice_pcp_sched_other IS 'Other practice 
 COMMENT ON COLUMN client_track.pra_id IS 'Unique record number for PRA patients';
 COMMENT ON COLUMN client_track.ppv IS 'PPV';
 COMMENT ON COLUMN client_track.spec_ops_id IS 'Special ops ID, same as HIE ID';
-COMMENT ON COLUMN client_track.document IS 'Document';

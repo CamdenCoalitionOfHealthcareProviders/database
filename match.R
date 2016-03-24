@@ -16,7 +16,7 @@
     # matchr(cap_list, pra, 'subscriber_id')
     # matchr(pra, client_track, 'pra_id')
 
-# Constraints by Table
+# Constraints byT able
   # cap_list -- subscriber_id (primary)
   # pra -- pra_id (primary), subscriber_id (foreign - cap_list)
   # spec_ops -- spec_ops_id (primary), subscriber_id (foreign - cap_list)
@@ -37,6 +37,29 @@
 
 ##################################
 
+# UPDATE ON 03/23/2016
+# 
+# 1. Match pra, spec_ops, and utilization with subscriber IDs to cap_list
+#   a. PURPOSE: Remove pra, spec_ops, and utilization records where subscriber_id don't match with cap_list
+#   b. Keep pra, spec_ops, and utilization records that match
+# 2. Match pra, spec_ops, and utilization admission ID to client track
+#   a. PURPOSE: Remove client_track records that do not match either pra_id, spec_ops_id, or admission_id
+#   b. For each data frame, filter CT records
+#     i. pra
+#       a. Match CT records that have a pra_id
+#     ii. spec_ops
+#       a. Match CT records that have a spec_ops_id
+#     iii. utilization
+#       a. Match CT records that have an admission_id
+#   c. Combine CT records where each data frame matches pra, spec_ops, or utilization
+# 
+# Filtered client_track data frames in which to match:
+# ct_pra <- filter(client_track, (is.na(client_track$pra_id) == "FALSE"))
+# ct_spec <- filter(client_track, (is.na(client_track$spec_ops_id) == "FALSE"))
+# ct_util <- filter(client_track, (is.na(client_track$admission_id) == "FALSE"))
+
+##################################
+
 # Set working directories
 setwd('Y:/database')
 
@@ -51,8 +74,12 @@ utilization <- read_csv("utilization.csv")
 client_track <- read_csv("client_track.csv")
 
 #matchr function
-matchr <- function(df1, df2, col){
-  library(dplyr)
-  df2_match <<- semi_join(df2, df1, by = col)
-  df2_no_match <<- anti_join(df2, df1, by = col)
-}
+# matchr <- function(df1, df2, col){
+#   library(dplyr)
+#   df2_match <<- semi_join(df2, df1, by = col)
+#   df2_no_match <<- anti_join(df2, df1, by = col)
+# }
+
+ct_pra <- filter(client_track, (is.na(client_track$PRAID) == "FALSE"))
+ct_spec <- filter(client_track, (is.na(client_track$`Special Ops Link`) == "FALSE"))
+ct_util <- filter(client_track, (is.na(client_track$AdmissionID) == "FALSE"))

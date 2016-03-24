@@ -1,0 +1,1 @@
+DROP TABLE cap_list, client_track, pra, spec_ops, utilization CASCADE;

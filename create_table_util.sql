@@ -10,10 +10,10 @@ CREATE TABLE utilization (
 	patient_class varchar,
 	dx_currentdx varchar,
 	dx_historical varchar,
-	inp6mo numeric,
-	inp6mo_util numeric,
-	ed6mo numeric,
-	ed6mo_util numeric,
+	inp6mo varchar,
+	inp6mo_util varchar,
+	ed6mo varchar,
+	ed6mo_util varchar,
 	chart_review_notes varchar,
 	typology varchar,
 	engage varchar,
@@ -47,7 +47,6 @@ CREATE TABLE utilization (
 	hosp_room varchar,
 	util_outcome_other varchar,
 	util_outcome_cat varchar,
-	reason_cmi_ineligible varchar,
 	bed_engage_outcome varchar,
 	bed_engage_outcome_reason varchar,
 	bed_engage_outcome_reason_other varchar,
@@ -116,7 +115,6 @@ COMMENT ON COLUMN utilization.bedside_assign_date IS 'Bedside assignment date';
 COMMENT ON COLUMN utilization.hosp_room IS 'Hospital room';
 COMMENT ON COLUMN utilization.util_outcome_other IS 'Other utilization outcome';
 COMMENT ON COLUMN utilization.util_outcome_cat IS 'Utilization outcome category';
-COMMENT ON COLUMN utilization.reason_cmi_ineligible IS 'Reason ineligible for CMI intervention';
 COMMENT ON COLUMN utilization.bed_engage_outcome IS 'Bedside engagement outcome';
 COMMENT ON COLUMN utilization.bed_engage_outcome_reason IS 'Bedside engagement outcome reason';
 COMMENT ON COLUMN utilization.bed_engage_outcome_reason_other IS 'Bedside engagement outcome other reason';

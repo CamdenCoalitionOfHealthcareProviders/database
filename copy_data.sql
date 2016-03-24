@@ -7,16 +7,16 @@
 */
 
 -- table: cap_list
-COPY cap_list FROM 'Y:/database/cap_list.csv' DELIMITERS ',' HEADER CSV;
+COPY cap_list FROM 'Y:/database/cap_list.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
 
 -- table: pra
-COPY pra FROM 'Y:/database/pra.csv' DELIMITERS ',' HEADER CSV;
+COPY pra FROM 'Y:/database/pra.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
 
 -- table: spec_ops
-COPY spec_ops FROM 'Y:/database/spec_ops.csv' DELIMITERS ',' HEADER CSV;
+COPY spec_ops FROM 'Y:/database/spec_ops.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
 
 -- table: utilization
-COPY utilization FROM 'Y:/database/utilization.csv' DELIMITERS ',' HEADER CSV;
+COPY utilization FROM 'Y:/database/utilization.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
 
 -- table: client_track
-COPY client_track FROM 'Y:/database/client_track.csv' DELIMITERS ',' HEADER CSV;
+COPY client_track FROM 'Y:/database/client_track.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
