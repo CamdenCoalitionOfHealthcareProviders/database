@@ -68,7 +68,8 @@ cap_list_rename <- rename(cap_list,
                    'xover_prog_other' = `Cross Over Program Other`,
                    'span_speaking' = `SpanishSpeaking`,
                    'homeless' = `Currently Homeless`,
-                   'notes_archive' = `AllnotesArchive`)
+                   'notes_archive' = `AllnotesArchive`,
+                   'notes_util_recent' = `MostRecentUtilizationNotesParagraph`)
 
 write_csv(cap_list_rename, path = "cap_list.csv")
 
