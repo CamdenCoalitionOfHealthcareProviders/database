@@ -19,4 +19,4 @@ COPY spec_ops FROM 'Y:/database/spec_ops.csv' DELIMITERS ',' ENCODING 'UTF8' HEA
 COPY utilization FROM 'Y:/database/utilization.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
 
 -- table: client_track
-COPY client_track FROM 'Y:/database/client_track.csv' DELIMITERS ',' ENCODING 'UTF8' HEADER CSV;
+COPY client_track FROM 'Y:/database/client_track.csv' DELIMITERS ',' NULL 'NA' ENCODING 'UTF8' HEADER CSV;
